@@ -15,8 +15,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var coinSideTextView: TextView
     private lateinit var flipButton: Button
     private lateinit var resetButton: Button
+    private lateinit var buttonAbout: Button
     private lateinit var headsCountTextView: TextView
     private lateinit var tailsCountTextView: TextView
+    //val toast = Toast.makeText(this, "Студенты 3 курса Зырянов Д.О., Яшуков А.А., Голышев К.В.", Toast.LENGTH_LONG)
 
 
 
@@ -30,10 +32,14 @@ class MainActivity : AppCompatActivity() {
         coinSideTextView = findViewById(R.id.coinSideTextView)
         flipButton = findViewById(R.id.flipButton)
         resetButton = findViewById(R.id.resetButton)
+        buttonAbout = findViewById(R.id.buttonAbout)
         headsCountTextView = findViewById(R.id.headsCountTextView)
         tailsCountTextView = findViewById(R.id.tailsCountTextView)
         flipButton.setOnClickListener { flipCoin() }
         resetButton.setOnClickListener { resetCounts() }
+        buttonAbout.setOnClickListener {
+            val toast = Toast.makeText(this, "Студенты 3 курса Зырянов Д.О., Яшуков А.А., Голышев К.В.", Toast.LENGTH_LONG)
+            toast.show() }
 
     }
 
